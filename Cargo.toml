@@ -1,0 +1,12 @@
+[package]
+name = "easy-ecc"
+version = "0.1.0"
+authors = ["Forrest Marshall <forrest@mimirblockchain.solutions>"]
+build = "build.rs"
+
+[dependencies]
+serde-hex = { git = "https://github.com/forrest-marshall/serde-hex.git" }
+libc = "0.2.33"
+
+[build-dependencies]
+gcc = "0.3.54"

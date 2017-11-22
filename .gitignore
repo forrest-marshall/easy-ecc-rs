@@ -1,0 +1,10 @@
+# temp directory
+/tmp/
+
+# vim swap files
+*.swp
+*.swo
+
+/target/
+**/*.rs.bk
+Cargo.lock
