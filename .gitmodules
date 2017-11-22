@@ -1,0 +1,4 @@
+[submodule "dep/easy-ecc"]
+	path = dep/easy-ecc
+	url = https://github.com/esxgx/easy-ecc.git
+	branch = master
