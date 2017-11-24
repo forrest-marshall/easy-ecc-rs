@@ -9,18 +9,19 @@ const BYTES: usize = 32;
 /// a public ecc key on the `secp256r1` curve.
 pub struct Public([u8;BYTES+1]);
 impl_newtype_bytearray_ext!(Public,BYTES+1);
+impl_hex_array_strict!(Public,BYTES+1);
 
 
 /// a secret ecc key on the `secp256r1` curve.
 #[derive(Debug,Default,PartialEq,Eq)]
 pub struct Secret([u8;BYTES]);
 impl_newtype_bytearray!(Secret,BYTES);
-
+impl_hex_array_strict!(Secret,BYTES);
 
 /// an ecc signature on the `secp256r1` curve.
 pub struct Signature([u8;BYTES*2]);
 impl_newtype_bytearray_ext!(Signature,BYTES*2);
-
+impl_hex_array_strict!(Signature,BYTES*2);
 
 /// generate a new ecc keypair.
 pub fn keygen(public: &mut Public, secret: &mut Secret) -> Result<(),()> {
